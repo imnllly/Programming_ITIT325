@@ -5,7 +5,7 @@
 #include <math.h>
 
 int main() {
-    float a, b, c, z;
+    float a, b, c, r;
     printf("Enter a:");
     scanf("%f", &a);
     printf("Enter b:");
@@ -16,8 +16,8 @@ int main() {
         printf("Error!");
     }
     else {
-        z = (powf(a, (b - c)) * sin(c / b) + powf((2 * a + b - c), 1.0 / 3.0) - 2.6);
-        printf("z=%f", z);
+        r = (powf(a, (b - c)) * sin(c / b) + powf((2 * a + b - c), 1.0 / 3.0) - 2.6);
+        printf("r=%f", r);
     }
     return 0;
 }
