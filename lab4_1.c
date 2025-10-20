@@ -13,7 +13,7 @@ int main() {
     int Xn[MAX_SIZE];
     int num_odd = 0;
     for (int i = 0; i < size; i++) {
-        Xn[i] = rand() % (2 * 100 + 1) - 100;
+        Xn[i] = rand() % (201) - 100;
         printf("%d \t", Xn[i]);
     }
     for (int i = 0; i < size; i++) {
