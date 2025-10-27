@@ -7,11 +7,9 @@
 
 int main() {
     srand(time(NULL));
-    int size;
+    int size, Xn[MAX_SIZE], num_odd = 0;
     printf("Enter array size: "); scanf("%d", &size);
     if (size > MAX_SIZE) size = MAX_SIZE;
-    int Xn[MAX_SIZE];
-    int num_odd = 0;
     for (int i = 0; i < size; i++) {
         Xn[i] = rand() % (201) - 100;
         printf("%d \t", Xn[i]);
