@@ -2,16 +2,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 
 #define MAX_SIZE 1000  
 
 int main() {
     srand(time(NULL));
-    int size;
+    int size, k = 0, n = 0;
+    float Yk[MAX_SIZE], s_pos = 0;
     printf("Enter arr size: "); scanf("%d", &size);
     if (size > MAX_SIZE) { size = MAX_SIZE; }
-    float Yk[MAX_SIZE], s_pos = 0;
-    int k = 0, n = 0;
     for (int i = 0; i < size; i++) {
         Yk[i] = (rand() % 201 - 100) + (rand() % 10) / 10.0;
         printf("%f \t", Yk[i]);
@@ -20,13 +20,13 @@ int main() {
             if (k == 2) { s_pos = Yk[i]; }
             else if (k > 2) { break; }
         }
-        if (Yk[i] == int(Yk[i])) { n++; }
+        if (fabsf(Yk[i] - roundf(Yk[i])) < 0.0001f) { n++; }
     }
     if (n == 0) { printf("\nThere are no integer elements"); }
     else {
         printf("\nInteger elements: \t");
         for (int i = 0; i < size; i++) {
-            if (Yk[i] == int(Yk[i])) { printf("%f \t", Yk[i]); }
+            if (fabsf(Yk[i] - roundf(Yk[i])) < 0.0001f) { printf("%f \t", Yk[i]); }
         }
     }
 
@@ -38,6 +38,6 @@ int main() {
         }
     }
     else { printf("\nThere is no second positive element, arr is same"); }
-  
+
     return 0;
 }
