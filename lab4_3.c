@@ -7,7 +7,7 @@
 
 int main() {
     srand(time(NULL));
-    int size, odd = 0, n = 0, Zm[MAX_SIZE], Yn[MAX_SIZE];
+    int size, odd = 0, n = 0, Zm[MAX_SIZE], Yn[MAX_SIZE], count = 0;
     printf("Enter arr size: "); scanf("%d", &size);
     if (size > MAX_SIZE) { size = MAX_SIZE; }
     printf("Zm: ");
@@ -19,7 +19,6 @@ int main() {
             n++;
         }
     }
-    int count = 0;
     if (n > 0) {
         int sr_ar = odd / n;
         printf("\nAverage number: %d", sr_ar);
