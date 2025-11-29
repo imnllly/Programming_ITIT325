@@ -18,7 +18,7 @@ int main() {
         if (abs(*ptr) % 2 != 0) { num_odd++; } // Указатель вместо Xn[i]
         ptr++; // Увеличение указателя на 1
     }
-    ptr = Xn;
+    ptr = Xn; //
     printf("\nOdd arr elements num: %d", num_odd);
     printf("\nAll negative arr elements indexes: ");
     for (int i = 0; i < size; i++) {
