@@ -15,13 +15,18 @@ int main() {
     if (rows > MAX_SIZE) { rows = MAX_SIZE; }
     if (column > MAX_SIZE) { column = MAX_SIZE; }
     if (column < 4 || column == MAX_SIZE || rows < 4 || rows == MAX_SIZE) {
-        printf("Martix is out of range"); 
+        printf("Martix is out of range");
     }
     else {
         int matrix[MAX_SIZE][MAX_SIZE];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < column; j++) {
                 matrix[i][j] = rand() % 15;
+                printf("Element [%d][%d]: %d\n", i, j, matrix[i][j]);
+            }
+        }
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < column; j++) {
                 if (matrix[i][j] == 0) { flag_zero = 1; }
                 printf("%d\t", matrix[i][j]);
             }
