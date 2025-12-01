@@ -16,20 +16,25 @@ int main() {
     if (rows > MAX_SIZE) { rows = MAX_SIZE; }
     if (column > MAX_SIZE) { column = MAX_SIZE; }
     if (column < 4 || column == MAX_SIZE || rows < 4 || rows == MAX_SIZE) {
-        printf("Martix is out of range"); 
+        printf("Martix is out of range");
     }
     else if (c > b) { printf("C is bigger than B"); }
     else {
         int matrix[MAX_SIZE][MAX_SIZE];
         float arr[MAX_SIZE] = { 0 };
         for (int i = 0; i < rows; i++) {
-            float summ = 0;
             for (int j = 0; j < column; j++) {
                 matrix[i][j] = rand() % 15;
+                printf("Element [%d][%d]: %d\n", i, j, matrix[i][j]);
+            }
+        }
+        for (int i = 0; i < rows; i++) {
+            float summ = 0;
+            for (int j = 0; j < column; j++) {
                 summ += matrix[i][j];
                 printf("%d\t", matrix[i][j]);
             }
-            printf("\nSumm = %f\n", summ);
+            printf("\n", summ);
             float sr_ar = summ / column;
             if (sr_ar >= c && sr_ar <= b) { arr[i] = sr_ar; }
         }
