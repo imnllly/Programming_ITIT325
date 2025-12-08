@@ -9,7 +9,6 @@ int getArrSize() {
     int size;
     printf("Enter arr size: "); scanf("%d", &size);
     if (size > MAX_SIZE) { size = MAX_SIZE; }
-    if (size < 0) { size = 0; }
     return size;
 }
 
