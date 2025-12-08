@@ -13,7 +13,7 @@ int main() {
     printf("Enter arr size: "); scanf("%d", &size);
     if (size > MAX_SIZE) { size = MAX_SIZE; }
     for (int i = 0; i < size; i++) {
-        Xn[i] = rand() % 201 - 100;
+        *ptr = rand() % 201 - 100; // Указатель вместо Xn[i]
         printf("%d \t", *ptr); // Указатель вместо Xn[i]
         if (abs(*ptr) % 2 != 0) { num_odd++; } // Указатель вместо Xn[i]
         ptr++; // Увеличение указателя на 1
